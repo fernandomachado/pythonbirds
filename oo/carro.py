@@ -108,3 +108,23 @@ class Motor:
         self.velocidade -= 2
         self.velocidade = max(0, self.velocidade)
 
+
+class Direcao:
+
+    pontos_cardeais = ['Norte', 'Leste', 'Sul', 'Oeste']
+    direcao = 0
+
+    def __init__(self):
+        self.valor = self.pontos_cardeais[self.direcao]
+
+    def girar_a_direita(self):
+        self.direcao += 1
+        if self.direcao >= len(self.pontos_cardeais):
+            self.direcao = 0
+        self.valor = self.pontos_cardeais[self.direcao]
+
+    def girar_a_esquerda(self):
+        self.direcao -= 1
+        # if self.direcao < 0:
+        #     self.direcao = 0
+        self.valor = self.pontos_cardeais[self.direcao]
