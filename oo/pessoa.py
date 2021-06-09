@@ -18,3 +18,8 @@ if __name__ == '__main__':
     print(celso.cumprimentar())
     for filho in celso.filhos:
         print(filho.nome)
+    celso.sobrenome = 'Machado'
+    print(celso.sobrenome)
+    del celso.filhos
+    print(celso.__dict__)
+    print(fernando.__dict__)
